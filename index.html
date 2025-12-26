@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradingView SILVER Technical Analysis</title>
+
+  <!-- AUTO REFRESH každých 11 sekúnd -->
+  <script>
+    setTimeout(function () {
+      location.reload();
+    }, 11000);
+  </script>
+
+  <style>
+    html, body {
+      background: #000000;   /* úplne čierne pozadie */
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .tradingview-widget-container {
+      background: transparent;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tradingview-widget-copyright {
+      color: #888888;
+      background: #000000;
+      text-align: center;
+      padding: 4px 0;
+      font-size: 11px;
+    }
+
+    .tradingview-widget-copyright a {
+      color: #4fa3ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+
+    <div class="tradingview-widget-copyright">
+      <a href="https://www.tradingview.com/symbols/SILVER/" target="_blank" rel="noopener nofollow">
+        SILVER (CFDs · US$ / OZ)
+      </a>
+      <span> • Technical Analysis by TradingView</span>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+      async>
+    {
+      "colorTheme": "dark",
+      "displayMode": "single",
+      "isTransparent": true,
+      "locale": "en",
+      "interval": "5m",
+      "disableInterval": false,
+      "width": "100%",
+      "height": "100%",
+      "symbol": "TVC:SILVER",
+      "showIntervalTabs": true
+    }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+</body>
+</html>
